@@ -1,5 +1,4 @@
-html {
-	font-size: 62.5%; /*1rem = 1px*/
+html { /*1rem = 10px*/
 }
 
 *:before,
@@ -7,8 +6,8 @@ html {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-body {
-	font-family: sans-serif;
+body, body *{
+	font-family: 'Lato','Roboto', sans-serif !important; 
 	color: rgba(0, 0, 0, 0.8);
 }
 
@@ -23,13 +22,97 @@ a {
 
 /*Example 1440px 1170px*/
 .container {
-	max-width: 1440px;
+	width: 1200px;
 	margin: 0 auto;
+	padding: 0 12px;
+	box-sizing: border-box;
 }
 
-.wrapper {
-	max-width: 1210px;
-	margin: 0 auto;
-	padding-left: 2rem;
-	padding-right: 2rem;
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 5px;
+	margin-bottom: 80px;
+}
+
+.header .header-logo-link {
+	background-image: url('/images/logo.png');
+	background-size: cover;
+	background-position: center;
+	width: 133px;
+	height: 50px;]
+
+}
+
+.header .header-menu-list {
+	display: flex;
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	
+}
+
+.header .header-menu-link {
+	margin-left: 4.8rem;
+	color: #6d7e8e /*#7e8d9b*/;
+}
+.header .header-login {
+	padding: 4px 16px;
+	border: 1px solid #E6E6E6;
+	border-radius: 7px;
+}
+/*Start banner*/
+
+.banner {
+	display: flex;
+	flex-direction: column;
+}
+.banner .header-banner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 100%;
+}
+.banner .header-banner header {
+	display: flex;
+	flex-direction: column;
+	margin-right: 120px;
+	width: 450px;
+}
+.banner .header-banner header h1 {
+	font-size: 80px;
+	font-family: 'Roboto';
+	font-weight: 900;
+	color: #000;
+	margin: 0 0 24px 0;
+	line-height: 1em;
+}
+.banner header h1 strong {
+	color: #000;
+	position: relative;
+}
+.banner header h1 strong::after {
+	content: '';
+	height: 2px;
+	background: #90C858;
+	width: 100%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.banner header h2 {
+	font-size: 19px;
+	margin: 0 0 24px 0;
+	line-height: 1.58em;
+}
+.banner video {
+	max-width: 100%;
+	width: 600px;
+	height: 380px;
+}
+
+.banner .xxx {
+	width: 90px;
+	height: 50px;
+	background-image: url('https://brilliant.org/site_media/version-V61a69754232/build/sprites-v2/publishers.png');
 }
