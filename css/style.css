@@ -1,0 +1,35 @@
+html {
+	font-size: 62.5%; /*1rem = 1px*/
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*Example 1440px 1170px*/
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	max-width: 1210px;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}

@@ -1,0 +1,1 @@
+This project is to clone Brilliant website in order to practice my HTML CSS and JS skills.
