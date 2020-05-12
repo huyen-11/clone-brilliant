@@ -33,6 +33,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	padding-top: 5px;
+	margin-top: 20px;
 	margin-bottom: 80px;
 }
 
@@ -105,14 +106,176 @@ a {
 	margin: 0 0 24px 0;
 	line-height: 1.58em;
 }
+.banner header .btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 196px;
+    height: 60px;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: opacity 100ms linear;
+    margin-bottom: 48px;
+}
+
+.banner header .btn:hover {
+	opacity: 0.9;
+	border-color: rgba(255, 255, 255, 0.7);
+}
 .banner video {
 	max-width: 100%;
 	width: 600px;
 	height: 380px;
 }
 
-.banner .xxx {
-	width: 90px;
-	height: 50px;
-	background-image: url('https://brilliant.org/site_media/version-V61a69754232/build/sprites-v2/publishers.png');
+/*Banner pulishers*/
+
+.banner-publishers-list  {
+	display: flex;
+	justify-content: space-between;
+	width: 1160px;
+	margin-top: 114px;
+	margin-bottom: 12px;
 }
+.banner-publishers-list li {
+	position: relative;
+	opacity: 0.5;	
+}
+.publisher {
+	display: block;
+	background-image: url('https://brilliant.org/site_media/version-V61a69754232/build/sprites-v2/publishers.png');
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.banner-publishers-list li .publisher-nyt {	
+	width: 208px;
+	height: 27.5px;
+	background-position: 0px 0px;
+}
+.banner-publishers-list li .publisher-tantalizing {
+	width: 78px;
+    height: 22px;
+    background-position: -125px -81.5px;
+}
+
+.banner-publishers-list li .publisher-atlantic {	
+	width: 85px;
+	height: 30px;
+	background-position: 0px -172px;
+}
+.banner-publishers-list li .publisher-advanced {
+	width: 69px;
+    height: 19px;
+    background-position: -88px -172px;
+}
+
+.banner-publishers-list li .publisher-guardian {	
+	width: 98px;
+    height: 31.5px;
+    background-position: 0px -109px;
+}
+.banner-publishers-list li .publisher-brilliant {
+	width: 61px;
+    height: 19px;
+    background-position: -210px 0px;
+}
+
+.banner-publishers-list li .publisher-npr {	
+	background-position: -100px -108.5px;
+	width: 91px;
+	height: 31px;
+}
+.banner-publishers-list li .publisher-promising-minds {
+    width: 123px;
+    height: 25px;
+    background-position: 0px -81.5px;
+}
+
+.banner-publishers-list li .publisher-insider {	
+	width: 84px;
+    height: 27px;
+    background-position: -111px -142px;	
+}
+.banner-publishers-list li .publisher-smart {
+	width: 48px;
+    height: 17px;
+    background-position: -210px -47px;
+}
+
+.banner-publishers-list li .publisher-wired {	
+	background-position: 0px -29.5px;
+    width: 116px;
+    height: 50px;
+}
+.banner-publishers-list li .publisher-geniuses {
+	width: 87px;
+    height: 32px;
+    background-position: -118px -29.5px;
+}
+
+.banner-publishers-list li .publisher-tc {
+    width: 48px;
+    height: 24px;
+    background-position: -210px -21px;	
+}
+.banner-publishers-list li .publisher-onto-something {
+	width: 109px;
+    height: 28px;
+    background-position: 0px -142px;
+}
+.banner-publishers-list li .publisher-quote-line {
+	width: 14.5px;
+    height: 19px;
+    background-position: -210px -66px;
+    display: none;
+}
+.banner-publishers-list .share {
+	display: none;
+}
+
+/*banner hover effect*/
+
+.banner-publishers-list li:hover  {
+	opacity: 1;
+}
+
+.banner-publishers-list li:hover .share {
+	position: absolute;
+    top: -56px;
+    display: block;
+}
+
+.banner-publishers-list li:nth-child(odd):hover .share{
+	right: -44px;
+}
+
+.banner-publishers-list li:nth-child(even):hover .share{
+	left: -44px;
+}
+
+.banner-publishers-list li:hover .publisher-quote-line {
+	position: absolute;
+    top: -30px;
+    display: block;
+}
+.banner-publishers-list li:nth-child(odd):hover .publisher-quote-line {
+	right: 15px;
+}
+.banner-publishers-list li:nth-child(even):hover .publisher-quote-line {
+	left: 15px;
+	-webkit-transform: rotate(114deg);
+	transform: rotate(114deg);
+}
+
+
+
+
+
+
+
+
+
