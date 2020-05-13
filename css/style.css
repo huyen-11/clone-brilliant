@@ -607,7 +607,7 @@ button {
 .footer ul {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	flex-wrap: wrap;
 	position: relative;
 	margin-bottom: 12px;
 	z-index: 1;
@@ -646,12 +646,23 @@ button {
 	grid-template-columns: repeat(8, 464px);
 	grid-template-rows: repeat(5, 110px);
 	}
+	footer.container {
+	width: 100%;
+	margin: 0 auto;
+	}
 	.footer:after {
+	width: 100%;
    	bottom: 0;
    	left: 0;
 	}
 }
 @media (max-width: 1200px) and (min-width: 700px) {
+	.divider {
+	width: 72%;
+	margin: 96px auto;
+	}
+}
+@media (max-width: 1280px) {
 	.container {
 	width: 960px;
 	padding-right: 8px;
@@ -669,19 +680,86 @@ button {
 	width: 100%;
 	padding: 0 24px;
 	}
-	.divider {
-	width: 72%;
-	margin: 96px auto;
-	}
+	
 	footer.container {
 	width: 100%;
 	padding-right: 8px;
 	padding-right: 8px;
+	margin: 0 0 0 0;
 	}	
-	.footer:after {
-   	left: -107px;
+	.footer:after {	
+   	/*left: -107px;*/
 	}
 }
+@media (max-width: 1024px) {
+	.container {
+	width: 95%;
+	}
+	.banner .header-banner header h1 {
+	font-size: 62px;
+	font-weight: bold;
+	}
+	.banner .header-banner header {
+	margin-right: 48px;
+	width: 450px;	
+	}
+	.banner-publishers-list  {
+	display: none;
+	}
+	.h3 header p {
+	width: 850px;	
+	}
+	.grid .grid-layout .overlay {
+	grid-template-columns: repeat(8, 420px);
+	grid-template-rows: repeat(5, 100px);
+	}
+	.box .box-header h5 {
+	font-size: 22px;
+	}
+	.principle .principle-list {
+	width: 850px;
+	}
+	.footer > div {
+	width: 700px;
+	}	
+}
+/**/
+@media (max-width: 767px) {
+	.container {
+	padding: 5px;
+	}
+	.banner .header-banner header h1 {
+	font-size: 62px;
+	font-weight: bold;
+	}
+	.banner .header-banner header {
+	margin-right: 48px;
+	width: 450px;	
+	}
+	.banner-publishers-list  {
+	display: none;
+	}
+	.h3 header p {
+/*	font-size: 19px;
+	line-height: 1.58em;*/
+	width: 850px;	
+	}
+	.grid .grid-layout .overlay {
+	grid-template-columns: repeat(8, 420px);
+	grid-template-rows: repeat(5, 100px);
+	}
+	.box .box-header h5 {
+	font-size: 22px;
+	}
+	.principle .principle-list {
+	width: 850px;
+	}
+	.footer > div {
+	width: 700px;
+	}	
+}
+
+/*767-481*/
 
 
 
