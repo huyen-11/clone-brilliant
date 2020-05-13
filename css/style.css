@@ -307,6 +307,7 @@ button {
 	color: #000;
 	position: relative;
 }
+
 .h3 header strong:after {
 	content: '';
 	position: absolute;
@@ -315,7 +316,9 @@ button {
 	height: 2px;
 	width: 100%;
 	background-color: #F6C335;
-	border-color: red;
+}
+.h3 header strong[id="hocbai"]:after {
+	background-color: rgb(52, 170, 207);
 }
 .h3 header p {
 	font-size: 19px;
@@ -487,6 +490,10 @@ button {
 .courses-list {
 	white-space: nowrap;
 	margin-bottom: 60px;
+	overflow: hidden;
+}
+.courses-list:last-child {
+	margin-bottom: 124px;
 }
 .courses-item {
 	height: 54px;
@@ -520,6 +527,91 @@ button {
 	background-color: #ffda75;
 }
 
+/*Start footer*/
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	padding-bottom: 112px;
+}
+.footer > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 960px;
+	height: 180px;
+	box-sizing: border-box;
+	padding: 0 60px;
+	margin-bottom: 84px;
+	background-color: #000;
+	border-radius: 10px;
+	font-weight: bold;
+	z-index: 1;
+}
+.footer h6 {
+	font-size: 30px;
+	color: #fff;
+	flex-basis: 380px;
+	line-height: 1.28em;
+}
+.footer .footer-btn {
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	padding: 15px 24px;
+	border-radius: 6px;
+	line-height: 1.37em;
+	transition: box-shadow 100ms linear, color 100ms linear;
+	position: relative;
+}
+.footer .footer-btn:after {
+	content: '';
+	position: absolute;
+	background:green;
+	border-radius: 5px;
+	bottom: 2px;
+	left: 2px;
+	right: 2px;
+	top: 2px;
+	transition: all 100ms linear;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-color: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+}
+.footer .footer-btn:hover:after {
+    opacity: 0.9;
+    box-shadow: 0px 1px 3px 3px rgba(0, 0, 0, 0.3);	
+}
+/*footer-menu-list*/
+.footer ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 12px;
+	z-index: 1;
+	width: 100%;
+}
+.footer:after {
+	content: '';
+	width: 1362px;
+    height: 397px;
+    position: absolute;
+   	bottom: 0;
+   	left: -94px;
+    background: url('https://brilliant.org/site_media/version-1/images/homepage/index-bg-shapes.svg');
+    background-repeat: no-repeat;
+}
+.footer ul .footer-menu-item a {
+	margin: 0 12px;
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.6);
+	transition: all 100ms linear;
+}
+.footer ul .footer-menu-item a:hover {
+	color: rgba(0, 0, 0, 0.9);
+}
 
 
 
