@@ -1,6 +1,7 @@
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
-
+var boxWidth = document.querySelector('.box');
+var size = boxWidth.clientWidth;
 var index = 0 ;
 
 var typed = new Typed( '#hocbai', {
@@ -15,7 +16,8 @@ var typed = new Typed( '#hocbai', {
 	typeSpeed: 100,
 	backSpeed: 100,
   	cursorChar: '',
-  	loop: false	
+  	loop: false,
+  	smartBackspace: false	
 });
 
 typed;
@@ -24,19 +26,23 @@ prev.addEventListener('click', prevContainer);
 next.addEventListener('click', nextContainer);
 
 function update() {
+	var i = 6;
+	if (size < 308) {
+		i = 13;
+	}
 	if (index === 0) {
 		prev.setAttribute("disabled", "disabled");
 	} else {
 		prev.removeAttribute("disabled");
 	}
-	if (index === 5) {
+	if (index === i) {
 		next.setAttribute("disabled", "disabled");
 	} else {
 		next.removeAttribute("disabled");
 	}
 
 	var overlay = document.querySelector('.overlay');
-	overlay.style.transform = "translateX(-" + index*560 + "px)";
+	overlay.style.transform = "translateX(-" + index*(size + 8) + "px)";
 }
 
 function nextContainer() {
