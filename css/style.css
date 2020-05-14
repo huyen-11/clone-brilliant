@@ -406,9 +406,6 @@ button {
 	grid-row: 4/6;
 }	
 
-.grid .grid-layout .overlay  {
-
-}
 .box {
 	max-width: 100%;
 	max-height: 100%;
@@ -505,11 +502,15 @@ button {
 .h3 header p[class="smaller-width"] {
 	width: 800px;
 }
-
+.courses-body {
+	width:  100%;
+	overflow: hidden;
+}
 .courses-list {
 	white-space: nowrap;
 	margin-bottom: 60px;
-	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	animation: slide 28s linear infinite;
 }
 .courses-list:last-child {
 	margin-bottom: 124px;
@@ -525,8 +526,17 @@ button {
 	align-items: center;
 	font-size: 17px;
 	font-weight: bold;
-	color: #000;
+	color: #000 !important;
+	transition: 500ms;
 }
+.courses-item > span {
+	color: #000 !important;
+}
+.courses-item:hover {
+	border: 2px solid rgba(0, 0, 0, 0.6);
+	color: rgba(0, 0, 0, 0.6) !important;
+}
+
 .courses-item .courses-subject {
 	height: 18px;
 	display: flex;
@@ -536,7 +546,6 @@ button {
 	margin-left: 8px;
 	font-size: 10px;
 	background-color: #bfbfbf;
-
 }
 .courses-item .math {
 	background-color: #A9D77B;
@@ -726,7 +735,7 @@ button {
 	.banner .header-banner header {
 	align-items: center;
     margin-right: 0;
-    width: 83%;
+    width: 90%;
 	}
 	.banner .header-banner header h1 {
 	font-size: 72px;
@@ -779,7 +788,7 @@ button {
 		padding: 4px 16px;
 	}
 	.banner .header-banner header h1 {
-	font-size: 68px;
+	font-size: 64px;
 	}
 	.banner .header-banner header h2 {
 	font-size: 18px; 
@@ -828,12 +837,17 @@ button {
 	.grid .grid-layout .overlay {
 		margin-left: 40px;
 	}
+	.courses-list {
+		margin-bottom: 40px;
+		animation: slide 26s linear infinite;
+	}
 	.footer > div {
-	width: 90%; 
+	    padding: 7px 25px;
+		width: 90%; 
 	}
 	.footer h6 {
 		font-size: 24px;
-		flex-basis: 220px;
+		flex-basis: 200px;
 	}
 }
 
@@ -887,6 +901,13 @@ button {
 	.box .box-body video {
 		max-width: 100%;
 		max-height: 100%;
+	}
+	.courses-list {
+		margin-bottom: 35px;
+		animation: slide 24s linear infinite;
+	}
+	.courses-list:last-child {
+		margin-bottom: 114px;
 	}
 	.footer > div {
 		flex-direction: column;
@@ -942,9 +963,18 @@ button {
 	}
 }
 
-/*767-481*/
+
+/**/
+
+@keyframes slide {
+	 100% { 
+    transform: translateX(-200%);  
+  	}
+}
 
 
+/*Done*/
+/*Respondsive and animation drive me crazy*/
 
 
 

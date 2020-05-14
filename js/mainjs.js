@@ -16,7 +16,7 @@ var typed = new Typed( '#hocbai', {
 	typeSpeed: 100,
 	backSpeed: 100,
   	cursorChar: '',
-  	loop: false,
+  	loop: true,
   	smartBackspace: false	
 });
 
